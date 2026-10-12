@@ -41,13 +41,14 @@
     file_put_contents('.htaccess', $htaccess );
 
     // create .htpasswd
-    $htpasswd = 'keammd:$apr1$0svhi7cp$Axyo6BGXRfrKUQldTFXcF1';
+    // generate your own line of the form user:hash, e.g. at http://www.htaccessredirect.net/
+    $htpasswd = 'USERNAME:PASSWORD_HASH';
 //password created at: http://www.htaccessredirect.net/ 
     file_put_contents(".htpasswd", $htpasswd );
     
     echo "<p>Password protection completed.</p>";
     
-    echo "<p>Username: <code>keammd</code><br>Password: <code>code_2017</code></p>"
+    echo "<p>Username: <code>USERNAME</code><br>Password: <code>PASSWORD</code></p>"
 
 ?>
 
